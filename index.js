@@ -19,19 +19,12 @@ function addToCart(item) {
 function viewCart() {
   if (cart.length === 0) {
     return console.log("Your shopping cart is empty.")
-  } else {
-    var returnString = "In your cart, you have "
-    for(var i = 0; i < cart.length; i++) {
-      for(var list in cart[i]){
-        returnString+=`${list} at $${cart[i][list]}`
-          if(i!==cart.length-1){
-            returnString+=", "
-          } else {
-            returnString+="."
-          }
-      }
-    }
-    return console.log(returnString)
+  }
+  var returnString = `In your cart, you have `;
+  if (cart.length === 1) {
+    returnString += `${Object.keys*(cart[1])} at $${cart[0][Object.keys(cart[0])]}.`
+  } else if (cart.length === 2) {
+    returnString += `${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]} and ${Object.keys(cart[1])} at $${cart[1][Object.keys(cart[1])]}.`
   }
 }
 
