@@ -49,7 +49,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var index = cart.indexOf(item);
+  const index = cart.indexOf(item);
   cart.splice(index, 1);
 }
 
