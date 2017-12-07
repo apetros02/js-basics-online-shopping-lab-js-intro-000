@@ -49,8 +49,14 @@ function total() {
 }
 
 function removeFromCart(item) {
-  const index = cart.indexOf(item);
-  cart.splice(index, 1);
+  for (var i = 0; i < cart.length-1; i++); {
+    if (Object.keys(cart[i]) == item) {
+      cart = [...cart.slice(0, i), ...cart.slice(i+1)];
+      return cart;
+    }
+  }
+  console.log(`That item is not in your cart.`);
+  return cart;
 }
 
 function placeOrder(cardNumber) {
