@@ -43,7 +43,7 @@ function viewCart() {
 function total() {
   var total = 0;
   for (var i = 0; i <= cart.length-1; i++) {
-    total += Object.(cart[i]);
+    total += Object(cart[i]);
   }
   return console.log(`$` + total);
 }
